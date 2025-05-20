@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: The Basic Kernel
+Gabe's Kernel Development Tutorial: The Basic Kernel
 
 
 
@@ -207,6 +207,3 @@ pause
 Our builder batch file: 'build.bat'
 ```
 
-|  |  |  |
-| --- | --- | --- |
-| [<< Getting Started](gettingstarted.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [C Sources and main() >>](creatingmain.htm) |

@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: Getting Started
+Gabe's Kernel Development Tutorial: Getting Started
 
 
 
@@ -68,7 +68,5 @@ Toolset
 - VMWare Workstation 4.0.5 [Linux/Windows NT/2000/XP]  
 - Microsoft VirtualPC [Windows NT/2000/XP]  
 - Bochs [Unix/Windows]
+- QEMU [Electricity]
 
-|  |  |  |
-| --- | --- | --- |
-| [<< Introduction](intro.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [The Basic Kernel >>](basickernel.htm) |

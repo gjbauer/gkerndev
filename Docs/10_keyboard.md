@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: The Keyboard
+Gabe's Kernel Development Tutorial: The Keyboard
 
 
 
@@ -69,7 +69,7 @@ unsigned char kbdus[128] =
     0,	/* F11 Key */
     0,	/* F12 Key */
     0,	/* All other keys are undefined */
-};		
+};
 ```
 
 ```
@@ -175,6 +175,3 @@ this point we have a kernel that can draw to the screen, handle exceptions, hand
 IRQs, handle the timer, and handle the keyboard. Click to find what's next in store
 for your kernel development.
 
-|  |  |  |
-| --- | --- | --- |
-| [<< The PIT](pit.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [What's left? >>](whatsleft.htm) |

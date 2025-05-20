@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: Interrupt Descriptor Table
+Gabe's Kernel Development Tutorial: Interrupt Descriptor Table
 
 
 
@@ -160,6 +160,3 @@ catch these 'exceptions' by installing Interrupt Service Routines in our new IDT
 If you got stuck writing 'idt\_set\_gate', you may find the solution to this section
 of the tutorial [here](../Sources/idt.c).
 
-|  |  |  |
-| --- | --- | --- |
-| [<< The GDT](gdt.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [Writing ISRs >>](isrs.htm) |

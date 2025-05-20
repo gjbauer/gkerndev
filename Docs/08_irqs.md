@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: Interrupt Requests and the Interrupt Controllers
+Gabe's Kernel Development Tutorial: Interrupt Requests and the Interrupt Controllers
 
 
 
@@ -43,54 +43,54 @@ interrupts:
 
 ```
 
-global _irq0
+.global irq0
 ...                ; You complete the rest!
-global _irq15
+.global irq15
 
 ; 32: IRQ0
-_irq0:
-    cli
-    push byte 0    ; Note that these don't push an error code on the stack:
-                   ; We need to push a dummy error code
-    push byte 32
-    jmp irq_common_stub
+irq0:
+	cli
+	pushl	$0x0    ; Note that these don't push an error code on the stack:
+			; We need to push a dummy error code
+	pushl	$0x20
+	jmp	irq_common_stub
 
 ...                ; You need to fill in the rest!
 
 ; 47: IRQ15
-_irq15:
-    cli
-    push byte 0
-    push byte 47
-    jmp irq_common_stub
+irq15:
+	cli
+	pushl	$0x0
+	pushl	$0x2f
+	jmp	irq_common_stub
 
-extern _irq_handler
+extern _irq_handler	# <- Fix that!!
 
 ; This is a stub that we have created for IRQ based ISRs. This calls
 ; '_irq_handler' in our C code. We need to create this in an 'irq.c'
 irq_common_stub:
-    pusha
-    push ds
-    push es
-    push fs
-    push gs
-    mov ax, 0x10
-    mov ds, ax
-    mov es, ax
-    mov fs, ax
-    mov gs, ax
-    mov eax, esp
-    push eax
-    mov eax, _irq_handler
-    call eax
-    pop eax
-    pop gs
-    pop fs
-    pop es
-    pop ds
-    popa
-    add esp, 8
-    iret
+	pushal
+	pushl	%ds
+	pushl	%es
+	pushl	%fs
+	pushl	%gs
+	movw	$0x10, %ax
+	movl	%eax, %ds
+	movl	%eax, %es
+	movl	%eax, %fs
+	movl	%eax, %gs
+	movl	%esp, %eax
+	pushl	%eax
+	movl	$0x0, %eax
+	calll	*%eax
+	popl	%eax
+	popl	%gs
+	popl	%fs
+	popl	%es
+	popl	%ds
+	popal
+	addl	$0x8, %esp
+	iretl
 		
 ```
 
@@ -228,6 +228,3 @@ associated with Operating System development. Most hobbyist OS developers do not
 successfully get past installing ISRs and an IDT. Next, we will learn about the
 simplest device to use an IRQ: The Programmable Interval Timer (PIT).
 
-|  |  |  |
-| --- | --- | --- |
-| [<< Writing ISRs](isrs.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [The PIT >>](pit.htm) |

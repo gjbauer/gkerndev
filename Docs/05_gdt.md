@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: Global Descriptor Table
+Gabe's Kernel Development Tutorial: Global Descriptor Table
 
 
 
@@ -218,6 +218,3 @@ link, and send our kernel to our floppy disk to test it out. You won't see any v
 changes on the screen: this is an internal change. Onto the Interrupt Descriptor
 Table (IDT)!
 
-|  |  |  |
-| --- | --- | --- |
-| [<< Printing Onscreen](printing.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [The IDT >>](idt.htm) |

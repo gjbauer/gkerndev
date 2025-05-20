@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: The Programmable Interval Timer
+Gabe's Kernel Development Tutorial: The Programmable Interval Timer
 
 
 
@@ -147,6 +147,3 @@ If you wish, add this to 'timer.c' and a prototype to 'system.h'
 Next, we will discuss how to use the keyboard. This involves installing a custom
 IRQ handler just like this tutorial, with hardware I/O on each interrupt.
 
-|  |  |  |
-| --- | --- | --- |
-| [<< IRQs and the PICs](irqs.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [The Keyboard >>](keyboard.htm) |

@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: Introduction
+Gabe's Kernel Development Tutorial: Introduction
 
 
 
@@ -70,6 +70,3 @@ the basics for a kernel. This involves:
 11) Managing Keyboard IRQs and Keyboard Data  
 12) ...and the rest is up to you!
 
-|  |  |  |
-| --- | --- | --- |
-| [<< Title](title.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [Getting Started >>](gettingstarted.htm) |

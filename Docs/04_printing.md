@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: Printing to screen
+Gabe's Kernel Development Tutorial: Printing to screen
 
 
 
@@ -272,6 +272,3 @@ click 'build.bat' to make your kernel, debugging any syntax errors. Copy your
 'kernel.bin' to your GRUB floppy disk, and if all went well, you should now have a
 kernel that prints 'Hello World!' on a black screen in white text!
 
-|  |  |  |
-| --- | --- | --- |
-| [<< C Sources and main()](creatingmain.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [The GDT >>](gdt.htm) |

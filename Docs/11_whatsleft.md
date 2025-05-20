@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: The Keyboard
+Gabe's Kernel Development Tutorial: The Keyboard
 
 
 
@@ -49,6 +49,3 @@ I hope that this tutorial has given you a more thorough understanding of some of
 various low-level items involved in creating a kernel: a driver for your processor
 and memory.
 
-|  |  |  |
-| --- | --- | --- |
-| [<< The Keyboard](keyboard.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [www.OSDever.net >>](http://www.osdever.net/) |

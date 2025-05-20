@@ -1,4 +1,4 @@
-Bran's Kernel Development Tutorial: Creating and Linking main()
+Gabe's Kernel Development Tutorial: Creating and Linking main()
 
 
 
@@ -166,6 +166,3 @@ to the list of object files that need to be linked to create your kernel! Finall
 you are stuck creating our accessory functions like memcpy, a solution 'main.c' is
 shown [here](../Sources/main.c).
 
-|  |  |  |
-| --- | --- | --- |
-| [<< The Basic Kernel](basickernel.htm) | [Contact Brandon F.](mailto:friesenb@gmail.com) | [Printing Onscreen >>](printing.htm) |

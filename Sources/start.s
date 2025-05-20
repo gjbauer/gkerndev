@@ -290,7 +290,7 @@ isr_common_stub:
 	movl	%eax, %gs
 	movl	%esp, %eax
 	pushl	%eax
-	movl	$0x0, %eax
+	movl	_fault_handler, %eax
 	calll	*%eax
 	popl	%eax
 	popl	%gs
