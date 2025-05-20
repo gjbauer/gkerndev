@@ -29,7 +29,7 @@ memory manager to give each task a separate space in memory.
 
 ### Example kernel online source tree
 
-![](asm_icon.PNG)[start.asm](../Sources/start.asm)  
+![](asm_icon.PNG)[start.s](../Sources/start.s)  
 ![](c_icon.PNG)[gdt.c](../Sources/gdt.c)  
 ![](c_icon.PNG)[idt.c](../Sources/idt.c)  
 ![](c_icon.PNG)[irq.c](../Sources/irq.c)  
