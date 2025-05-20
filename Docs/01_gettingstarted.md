@@ -47,21 +47,16 @@ and debug your kernel on real hardware.
 - a Keyboard  
 - a Floppy drive  
 - a Hard disk with enough space for all development tools and space for documents and source code  
-- Microsoft Windows, or a flavour of Unix (Linux, FreeBSD)  
+- A flavour of Unix (Linux, FreeBSD)  
 - an Internet connection to look up documents  
 (A mouse is highly recommended)
 
 Toolset
 -------
 
-### Compilers
+### Compilers & Assembler
 
-- The Gnu C Compiler (GCC) [Unix]  
-- DJGPP (GCC for DOS/Windows) [Windows]
-
-### Assemblers
-
-- Netwide Assembler (NASM) [Unix/Windows]
+- The LLVM Toolchain
 
 ### Virtual Machines
 
