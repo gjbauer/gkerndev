@@ -41,9 +41,10 @@ memory manager to give each task a separate space in memory.
 ![](h_icon.PNG)[include/system.h](../Sources/include/system.h)  
 ![](ld_icon.PNG)[link.ld](../Sources/link.ld)  
 ![](bat_icon.PNG)[build.bat](../Sources/build.bat)  
+![](bat_icon.PNG)[build.sh](../Sources/build.sh)  
 ![](disk_icon.PNG)[dev\_kernel\_grub.img](../Sources/dev_kernel_grub.img)
 
-Get the whole tutorial and example kernel [here](../bkerndev.zip) (110KBytes).
+Get the whole tutorial and example kernel [here]([../bkerndev.zip](https://github.com/gjbauer/gkerndev/archive/refs/heads/main.zip)) (110KBytes).
 
 I hope that this tutorial has given you a more thorough understanding of some of the
 various low-level items involved in creating a kernel: a driver for your processor
