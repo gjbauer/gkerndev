@@ -40,7 +40,6 @@ memory manager to give each task a separate space in memory.
 ![](c_icon.PNG)[timer.c](../Sources/timer.c)  
 ![](h_icon.PNG)[include/system.h](../Sources/include/system.h)  
 ![](ld_icon.PNG)[link.ld](../Sources/link.ld)  
-![](bat_icon.PNG)[build.bat](../Sources/build.bat)  
 ![](bat_icon.PNG)[build.sh](../Sources/build.sh)  
 ![](disk_icon.PNG)[dev\_kernel\_grub.img](../Sources/dev_kernel_grub.img)
 
