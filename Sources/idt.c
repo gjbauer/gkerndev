@@ -4,6 +4,7 @@
 *
 *  Notes: No warranty expressed or implied. Use at own risk. */
 #include <system.h>
+#include <stdint.h>
 
 /* Defines an IDT entry */
 struct idt_entry
@@ -53,7 +54,7 @@ void idt_install()
 {
     /* Sets the special IDT pointer up, just like in 'gdt.c' */
     idtp.limit = (sizeof (struct idt_entry) * 256) - 1;
-    idtp.base = &idt;
+    idtp.base = (uintptr_t) &idt;
 
     /* Clear out the entire IDT, initializing it to zeros */
     memset(&idt, 0, sizeof(struct idt_entry) * 256);

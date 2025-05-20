@@ -1,3 +1,59 @@
+.global gdt_flush
+.global idt_load
+.global irq_install
+
+.global isr0
+.global isr1
+.global isr2
+.global isr3
+.global isr4
+.global isr5
+.global isr6
+.global isr7
+.global isr8
+.global isr9
+.global isr10
+.global isr11
+.global isr12
+.global isr13
+.global isr14
+.global isr15
+.global isr16
+.global isr17
+.global isr18
+.global isr19
+.global isr20
+.global isr21
+.global isr22
+.global isr23
+.global isr24
+.global isr25
+.global isr26
+.global isr27
+.global isr28
+.global isr29
+.global isr30
+.global isr31
+
+.global irq0
+.global irq1
+.global irq2
+.global irq3
+.global irq4
+.global irq5
+.global irq6
+.global irq7
+.global irq8
+.global irq9
+.global irq10
+.global irq11
+.global irq12
+.global irq13
+.global irq14
+.global irq15
+
+.global start
+
 start:
 	movl	$0x2000, %esp           # imm = 0x2000
 	jmp	stublet
@@ -15,10 +71,10 @@ mboot:
 	addb	%ch, %al
 
 stublet:
-	calll	stublet+0x1
-	jmp	stublet+0x5
+	#call _main
+	jmp stublet
 
-_gdt_flush:
+gdt_flush:
 	lgdtl	0x0
 	movw	$0x10, %ax
 	movl	%eax, %ds
@@ -31,191 +87,191 @@ _gdt_flush:
 flush2:
 	retl
 
-_idt_load:
+idt_load:
 	lidtl	0x0
 	retl
 
-_isr0:
+isr0:
 	cli
 	pushl	$0x0
 	pushl	$0x0
 	jmp	isr_common_stub
 
-_isr1:
+isr1:
 	cli
 	pushl	$0x0
 	pushl	$0x1
 	jmp	isr_common_stub
 
-_isr2:
+isr2:
 	cli
 	pushl	$0x0
 	pushl	$0x2
 	jmp	isr_common_stub
 
-_isr3:
+isr3:
 	cli
 	pushl	$0x0
 	pushl	$0x3
 	jmp	isr_common_stub
 
-_isr4:
+isr4:
 	cli
 	pushl	$0x0
 	pushl	$0x4
 	jmp	isr_common_stub
 
-_isr5:
+isr5:
 	cli
 	pushl	$0x0
 	pushl	$0x5
 	jmp	isr_common_stub
 
-_isr6:
+isr6:
 	cli
 	pushl	$0x0
 	pushl	$0x6
 	jmp	isr_common_stub
 
-_isr7:
+isr7:
 	cli
 	pushl	$0x0
 	pushl	$0x7
 	jmp	isr_common_stub
 
-_isr8:
+isr8:
 	cli
 	pushl	$0x8
 	jmp	isr_common_stub
 
-_isr9:
+isr9:
 	cli
 	pushl	$0x0
 	pushl	$0x9
 	jmp	isr_common_stub
 
-_isr10:
+isr10:
 	cli
 	pushl	$0xa
 	jmp	isr_common_stub
 
-_isr11:
+isr11:
 	cli
 	pushl	$0xb
 	jmp	isr_common_stub
 
-_isr12:
+isr12:
 	cli
 	pushl	$0xc
 	jmp	isr_common_stub
 
-_isr13:
+isr13:
 	cli
 	pushl	$0xd
 	jmp	isr_common_stub
 
-_isr14:
+isr14:
 	cli
 	pushl	$0xe
 	jmp	isr_common_stub
 
-_isr15:
+isr15:
 	cli
 	pushl	$0x0
 	pushl	$0xf
 	jmp	isr_common_stub
 
-_isr16:
+isr16:
 	cli
 	pushl	$0x0
 	pushl	$0x10
 	jmp	isr_common_stub
 
-_isr17:
+isr17:
 	cli
 	pushl	$0x0
 	pushl	$0x11
 	jmp	isr_common_stub
 
-_isr18:
+isr18:
 	cli
 	pushl	$0x0
 	pushl	$0x12
 	jmp	isr_common_stub
 
-_isr19:
+isr19:
 	cli
 	pushl	$0x0
 	pushl	$0x13
 	jmp	isr_common_stub
 
-_isr20:
+isr20:
 	cli
 	pushl	$0x0
 	pushl	$0x14
 	jmp	isr_common_stub
 
-_isr21:
+isr21:
 	cli
 	pushl	$0x0
 	pushl	$0x15
 	jmp	isr_common_stub
 
-_isr22:
+isr22:
 	cli
 	pushl	$0x0
 	pushl	$0x16
 	jmp	isr_common_stub
 
-_isr23:
+isr23:
 	cli
 	pushl	$0x0
 	pushl	$0x17
 	jmp	isr_common_stub
 
-_isr24:
+isr24:
 	cli
 	pushl	$0x0
 	pushl	$0x18
 	jmp	isr_common_stub
 
-_isr25:
+isr25:
 	cli
 	pushl	$0x0
 	pushl	$0x19
 	jmp	isr_common_stub
 
-_isr26:
+isr26:
 	cli
 	pushl	$0x0
 	pushl	$0x1a
 	jmp	isr_common_stub
 
-_isr27:
+isr27:
 	cli
 	pushl	$0x0
 	pushl	$0x1b
 	jmp	isr_common_stub
 
-_isr28:
+isr28:
 	cli
 	pushl	$0x0
 	pushl	$0x1c
 	jmp	isr_common_stub
 
-_isr29:
+isr29:
 	cli
 	pushl	$0x0
 	pushl	$0x1d
 	jmp	isr_common_stub
 
-_isr30:
+isr30:
 	cli
 	pushl	$0x0
 	pushl	$0x1e
 	jmp	isr_common_stub
 
-_isr31:
+isr31:
 	cli
 	pushl	$0x0
 	pushl	$0x1f
@@ -245,97 +301,97 @@ isr_common_stub:
 	addl	$0x8, %esp
 	iretl
 
-_irq0:
+irq0:
 	cli
 	pushl	$0x0
 	pushl	$0x20
 	jmp	irq_common_stub
 
-_irq1:
+irq1:
 	cli
 	pushl	$0x0
 	pushl	$0x21
 	jmp	irq_common_stub
 
-_irq2:
+irq2:
 	cli
 	pushl	$0x0
 	pushl	$0x22
 	jmp	irq_common_stub
 
-_irq3:
+irq3:
 	cli
 	pushl	$0x0
 	pushl	$0x23
 	jmp	irq_common_stub
 
-_irq4:
+irq4:
 	cli
 	pushl	$0x0
 	pushl	$0x24
 	jmp	irq_common_stub
 
-_irq5:
+irq5:
 	cli
 	pushl	$0x0
 	pushl	$0x25
 	jmp	irq_common_stub
 
-_irq6:
+irq6:
 	cli
 	pushl	$0x0
 	pushl	$0x26
 	jmp	irq_common_stub
 
-_irq7:
+irq7:
 	cli
 	pushl	$0x0
 	pushl	$0x27
 	jmp	irq_common_stub
 
-_irq8:
+irq8:
 	cli
 	pushl	$0x0
 	pushl	$0x28
 	jmp	irq_common_stub
 
-_irq9:
+irq9:
 	cli
 	pushl	$0x0
 	pushl	$0x29
 	jmp	irq_common_stub
 
-_irq10:
+irq10:
 	cli
 	pushl	$0x0
 	pushl	$0x2a
 	jmp	irq_common_stub
 
-_irq11:
+irq11:
 	cli
 	pushl	$0x0
 	pushl	$0x2b
 	jmp	irq_common_stub
 
-_irq12:
+irq12:
 	cli
 	pushl	$0x0
 	pushl	$0x2c
 	jmp	irq_common_stub
 
-_irq13:
+irq13:
 	cli
 	pushl	$0x0
 	pushl	$0x2d
 	jmp	irq_common_stub
 
-_irq14:
+irq14:
 	cli
 	pushl	$0x0
 	pushl	$0x2e
 	jmp	irq_common_stub
 
-_irq15:
+irq15:
 	cli
 	pushl	$0x0
 	pushl	$0x2f

@@ -4,6 +4,7 @@
 *
 *  Notes: No warranty expressed or implied. Use at own risk. */
 #include <system.h>
+#include <stdint.h>
 
 /* Defines a GDT entry */
 struct gdt_entry
@@ -56,7 +57,7 @@ void gdt_install()
 {
     /* Setup the GDT pointer and limit */
     gp.limit = (sizeof(struct gdt_entry) * 3) - 1;
-    gp.base = &gdt;
+    gp.base = (uintptr_t) &gdt;
 
     /* Our NULL descriptor */
     gdt_set_gate(0, 0, 0, 0, 0);
