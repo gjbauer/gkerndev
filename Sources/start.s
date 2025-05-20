@@ -15,8 +15,8 @@ mboot:
 	addb	%ch, %al
 
 stublet:
-	calll	0x29 <stublet+0x1>
-	jmp	0x2d <stublet+0x5>
+	calll	stublet+0x1
+	jmp	stublet+0x5
 
 _gdt_flush:
 	lgdtl	0x0
@@ -75,13 +75,13 @@ _isr6:
 	cli
 	pushl	$0x0
 	pushl	$0x6
-	jmp	0x14f <isr_common_stub>
+	jmp	isr_common_stub
 
 _isr7:
 	cli
 	pushl	$0x0
 	pushl	$0x7
-	jmp	0x14f <isr_common_stub>
+	jmp	isr_common_stub
 
 _isr8:
 	cli
@@ -92,7 +92,7 @@ _isr9:
 	cli
 	pushl	$0x0
 	pushl	$0x9
-	jmp	0x14f <isr_common_stub>
+	jmp	isr_common_stub
 
 _isr10:
 	cli
@@ -159,7 +159,7 @@ _isr21:
 	cli
 	pushl	$0x0
 	pushl	$0x15
-	jmp	0x14f <isr_common_stub>
+	jmp	isr_common_stub
 
 _isr22:
 	cli
@@ -291,7 +291,7 @@ _irq7:
 	cli
 	pushl	$0x0
 	pushl	$0x27
-	jmp	0x1e8 <irq_common_stub>
+	jmp	irq_common_stub
 
 _irq8:
 	cli
