@@ -1,7 +1,6 @@
 #!/bin/sh
 # TODO: Make a Makefile!!
 echo Now assembling, compiling, and linking your kernel:
-#nasm -f aout -o start.o start.asm
 gcc -c -m32 -o start.o start.s
 echo Remember this spot here: We will add 'gcc' commands here to compile C sources
 
