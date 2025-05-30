@@ -716,20 +716,13 @@ linker gives out onscreen in terms of syntax errors.
 
 ```
 
-echo Now assembling, compiling, and linking your kernel:
-nasm -f aout -o start.o start.asm
-rem Remember this spot here: We will add 'gcc' commands here to compile C sources
-
-
-rem This links all your files. Remember that as you add *.o files, you need to
-rem add them after start.o. If you don't add them at all, they won't be in your kernel!
-ld -T link.ld -o kernel.bin start.o
-echo Done!
-pause
+clang -c -m32 -o start.o start.s
+clang -c -m32 -o boot.o boot.S -I../include
+ld -melf_i386 -T link.ld -o kernel.bin amd64/*.o boot.o
 		
 ```
 
 ```
-Our builder batch file: 'build.bat'
+Our builder batch file: A "Makefile"
 ```
 
