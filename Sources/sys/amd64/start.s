@@ -55,23 +55,12 @@
 .global start
 
 start:
-	movl	$0x2000, %esp           # imm = 0x2000
 	jmp	stublet
 	nop
 
-mboot:
-	addb	0x31bad(%eax), %dh
-	addl	%eax, (%eax)
-	sti
-	decl	%edi
-	pushl	%ecx
-	inb	$0x8, %al
-       
-	addb	%al, (%eax)
-	addb	%ch, %al
-
 stublet:
-	#call _main
+	/*  Now enter the C main function... */
+        call    main
 	jmp stublet
 
 gdt_flush:
@@ -290,7 +279,7 @@ isr_common_stub:
 	movl	%eax, %gs
 	movl	%esp, %eax
 	pushl	%eax
-	movl	_fault_handler, %eax
+	movl	fault_handler, %eax
 	calll	*%eax
 	popl	%eax
 	popl	%gs
