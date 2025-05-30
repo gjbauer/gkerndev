@@ -16,4 +16,4 @@ By: [Brandon Friesen](mailto:friesenb@gmail.com)
 Extended by: [Gabriel Bauer](mailto:gabeb1277@gmail.com)
 
 
-[Begin >>](00_intro.md)
+[Begin >>](Docs/00_intro.md)
