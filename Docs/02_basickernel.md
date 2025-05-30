@@ -693,8 +693,8 @@ The Linker Script: 'link.ld'
 
 ### Assemble and Link!
 
-Now, we must assemble 'start.asm' as well as use the linker script, 'link.ld' shown
-above, to create our kernel's binary for GRUB to load. The simplest way to do this
+Now, we must assemble 'start.s' & 'boot.S' as well as use the linker script, 'link.ld'
+shown above, to create our kernel's binary for GRUB to load. The simplest way to do this
 in Unix is to create a makefile script to do the assembling, compiling, and linking
 for you, however, most of the people here including myself, use a flavour of Windows.
 Here, we can create a batch file. A batch file is simply a collection of DOS commands
