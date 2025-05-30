@@ -409,3 +409,7 @@ irq_common_stub:
 	popal
 	addl	$0x8, %esp
 	iretl
+
+	.bss
+
+.comm	_sys_stack, 8192
