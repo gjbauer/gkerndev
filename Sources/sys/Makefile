@@ -2,11 +2,10 @@
 all:
 	$(MAKE) -C amd64
 	$(MAKE) -C kern
-	clang -c -m32 -o boot.o boot.S -I../include
-	ld -melf_i386 -T link.ld -o kernel.bin amd64/*.o kern/*.o boot.o
+	ld -melf_i386 -T link.ld -o kernel.bin amd64/*.o kern/*.o
 
 clean:
-	rm -r */*.o *.o kernel.bin
+	rm -r */*.o kernel.bin
 
 # If the makefile can't find QEMU, specify its path here
 # QEMU = qemu-system-i386

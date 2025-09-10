@@ -3,3 +3,4 @@ CFLAGS := -m32 -Wall -O -fstrength-reduce -fomit-frame-pointer -finline-function
 all: 
 	clang $(CFLAGS) -c *.c
 	clang -c -m32 -o start.o start.s
+	clang -c -m32 -o boot.o boot.S -I../../include
