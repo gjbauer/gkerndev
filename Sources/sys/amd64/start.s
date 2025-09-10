@@ -55,13 +55,10 @@
 .global start
 
 start:
-	jmp	stublet
-	nop
-
-stublet:
 	/*  Now enter the C main function... */
         call    main
-	jmp stublet
+	jmp	start
+	nop
 
 gdt_flush:
 	lgdtl	0x0
